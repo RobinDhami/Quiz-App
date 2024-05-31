@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { postQuizObj, quizSuccess } from "../../Redux/action.js";
@@ -40,7 +40,7 @@ export const QuizForm = () => {
     setAns((prev) =>
       ans?.map((item) =>
         item.id === id
-          ? { ...item, [name]: value == "true" ? true : value }
+          ? { ...item, [name]: value === "true" ? true : value }
           : item
       )
     );
